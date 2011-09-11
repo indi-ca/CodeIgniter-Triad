@@ -52,7 +52,7 @@ if (ENVIRONMENT == 'testing')
 }
 else
 {
-	$active_group = 'ci_triad';
+	$active_group = 'ci_triad_test';
 }
 
 $active_record = TRUE;

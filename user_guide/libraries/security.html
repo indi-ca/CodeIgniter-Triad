@@ -28,7 +28,7 @@
 <div id="masthead">
 <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
 <tr>
-<td><h1>CodeIgniter User Guide Version 2.0.2</h1></td>
+<td><h1>CodeIgniter User Guide Version 2.0.3</h1></td>
 <td id="breadcrumb_right"><a href="../toc.html">Table of Contents Page</a></td>
 </tr>
 </table>
@@ -115,6 +115,9 @@ Note: This function should only be used to deal with data upon submission. It's 
 <code>$config['csrf_protection'] = TRUE;</code>
 
 <p>If you use the <a href="../helpers/form_helper.html">form helper</a> the <var>form_open()</var> function will automatically insert a hidden csrf field in your forms.</p>
+
+<p>Select URIs can be whitelisted from csrf protection (for example API endpoints expecting externally POSTed content). You can add these URIs by editing the 'csrf_exclude_uris' config parameter:</p>
+<code>$config['csrf_exclude_uris'] = array('api/person/add');</code>
 
 </div>
 <!-- END CONTENT -->

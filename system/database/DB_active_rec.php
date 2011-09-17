@@ -177,7 +177,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string	an alias
 	 * @return	object
 	 */
-	protected function _max_min_avg_sum($select = '', $alias = '', $type = 'MAX')
+	public function _max_min_avg_sum($select = '', $alias = '', $type = 'MAX')
 	{
 		if ( ! is_string($select) OR $select == '')
 		{
@@ -217,7 +217,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string
 	 * @return	string
 	 */
-	protected function _create_alias_from_table($item)
+	public function _create_alias_from_table($item)
 	{
 		if (strpos($item, '.') !== FALSE)
 		{
@@ -395,7 +395,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string
 	 * @return	object
 	 */
-	protected function _where($key, $value = NULL, $type = 'AND ', $escape = NULL)
+	public function _where($key, $value = NULL, $type = 'AND ', $escape = NULL)
 	{
 		if ( ! is_array($key))
 		{
@@ -531,7 +531,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string
 	 * @return	object
 	 */
-	protected function _where_in($key = NULL, $values = NULL, $not = FALSE, $type = 'AND ')
+	public function _where_in($key = NULL, $values = NULL, $not = FALSE, $type = 'AND ')
 	{
 		if ($key === NULL OR $values === NULL)
 		{
@@ -646,7 +646,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string
 	 * @return	object
 	 */
-	protected function _like($field, $match = '', $type = 'AND ', $side = 'both', $not = '')
+	public function _like($field, $match = '', $type = 'AND ', $side = 'both', $not = '')
 	{
 		if ( ! is_array($field))
 		{
@@ -767,7 +767,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string
 	 * @return	object
 	 */
-	protected function _having($key, $value = '', $type = 'AND ', $escape = TRUE)
+	public function _having($key, $value = '', $type = 'AND ', $escape = TRUE)
 	{
 		if ( ! is_array($key))
 		{
@@ -1621,7 +1621,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	string	The table to inspect
 	 * @return	string
 	 */
-	protected function _track_aliases($table)
+	public function _track_aliases($table)
 	{
 		if (is_array($table))
 		{
@@ -1666,7 +1666,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 *
 	 * @return	string
 	 */
-	protected function _compile_select($select_override = FALSE)
+	public function _compile_select($select_override = FALSE)
 	{
 		// Combine any cached components with the current statements
 		$this->_merge_cache();
@@ -1932,7 +1932,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 *
 	 * @return	void
 	 */
-	protected function _merge_cache()
+	public function _merge_cache()
 	{
 		if (count($this->ar_cache_exists) == 0)
 		{
@@ -1970,7 +1970,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 * @param	array	An array of fields to reset
 	 * @return	void
 	 */
-	protected function _reset_run($ar_reset_items)
+	public function _reset_run($ar_reset_items)
 	{
 		foreach ($ar_reset_items as $item => $default_value)
 		{
@@ -1988,7 +1988,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 *
 	 * @return	void
 	 */
-	protected function _reset_select()
+	public function _reset_select()
 	{
 		$ar_reset_items = array(
 			'ar_select'			=> array(),
@@ -2020,7 +2020,7 @@ class CI_DB_active_record extends CI_DB_driver {
 	 *
 	 * @return	void
 	 */
-	protected function _reset_write()
+	public function _reset_write()
 	{
 		$ar_reset_items = array(
 			'ar_set'		=> array(),

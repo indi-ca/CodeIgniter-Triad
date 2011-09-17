@@ -2,7 +2,12 @@
 
 //include_once "application/controllers/../modules/modulea/controllers/albert.php";
 
-class Hybrid extends CI_Controller {
+class Hybrid extends MX_Controller {
+
+	function __construct()
+	{
+		parent::__construct();
+	}
 
 	public function index()
 	{
@@ -16,7 +21,7 @@ class Hybrid extends CI_Controller {
 //			echo $user->description;
 //		}
 
-		$this->load->module('modulea/albert');
+		$this->load->module('modulea/modulea');
 		$this->load->view('hybrid/index');
 	}
 }

@@ -5,8 +5,8 @@ class ModuleA extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->library('librarya');
-		$this->librarya->someMethod();
+//		$this->load->library('librarya');
+//		$this->librarya->someMethod();
 		$this->load->view('main');
 	}
 }

@@ -45,24 +45,48 @@
 | the active record class
 */
 
-$active_group = 'default';
+if (ENVIRONMENT == 'testing')
+{
+	$active_group = 'ci_triad_test';
+}
+else
+{
+	$active_group = 'ci_triad_test';
+}
+
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+$db['ci_triad_test']['hostname'] = 'localhost';
+$db['ci_triad_test']['username'] = 'ci_triad_testu';
+$db['ci_triad_test']['password'] = 'password';
+$db['ci_triad_test']['database'] = 'ci_triad_test';
+$db['ci_triad_test']['dbdriver'] = 'mysql';
+$db['ci_triad_test']['dbprefix'] = '';
+$db['ci_triad_test']['pconnect'] = TRUE;
+$db['ci_triad_test']['db_debug'] = TRUE;
+$db['ci_triad_test']['cache_on'] = FALSE;
+$db['ci_triad_test']['cachedir'] = '';
+$db['ci_triad_test']['char_set'] = 'utf8';
+$db['ci_triad_test']['dbcollat'] = 'utf8_general_ci';
+$db['ci_triad_test']['swap_pre'] = '';
+$db['ci_triad_test']['autoinit'] = TRUE;
+$db['ci_triad_test']['stricton'] = FALSE;
+
+$db['ci_triad']['hostname'] = 'localhost';
+$db['ci_triad']['username'] = 'ci_triadu';
+$db['ci_triad']['password'] = 'password';
+$db['ci_triad']['database'] = 'ci_triad';
+$db['ci_triad']['dbdriver'] = 'mysql';
+$db['ci_triad']['dbprefix'] = '';
+$db['ci_triad']['pconnect'] = TRUE;
+$db['ci_triad']['db_debug'] = TRUE;
+$db['ci_triad']['cache_on'] = FALSE;
+$db['ci_triad']['cachedir'] = '';
+$db['ci_triad']['char_set'] = 'utf8';
+$db['ci_triad']['dbcollat'] = 'utf8_general_ci';
+$db['ci_triad']['swap_pre'] = '';
+$db['ci_triad']['autoinit'] = TRUE;
+$db['ci_triad']['stricton'] = FALSE;
 
 
 /* End of file database.php */

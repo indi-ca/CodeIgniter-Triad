@@ -431,6 +431,34 @@ class CIU_Loader extends CI_Loader {
 		$this->_ci_models = array();
 		$this->_ci_helpers = array();
 	}
+
+    public function database($params = '', $return = FALSE, $active_record = NULL)
+     {
+         //parent::database($params, $return, $active_record);
+         // Grab the super object
+         $CI =& get_instance();
+
+         // Do we even need to load the database class?
+         if (class_exists('CI_DB') AND $return == FALSE AND $active_record == NULL AND isset($CI->db) AND is_object($CI->db))
+         {
+             return FALSE;
+         }
+
+         require_once(APPPATH.'third_party/datamapper/system/DB.php');
+
+         if ($return === TRUE)
+         {
+             return DB($params, $active_record);
+         }
+
+         // Initialize the db variable.  Needed to prevent
+         // reference errors with some configurations
+         $CI->db = '';
+
+         // Load the DB class
+         $CI->db =& DB($params, $active_record);
+     }
+
 }
 
 /* End of file CIU_Loader.php */

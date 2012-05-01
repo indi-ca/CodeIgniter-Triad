@@ -18,5 +18,14 @@ class SomeLibTest extends CIUnit_TestCase
 	{
 		// Check if everything is ok
 		//$this->assertEquals(4, $this->CI->mylib->add(2, 2));
+
+		$this->CI->load->database('ci_triad_test',true);
+
+		$kombucha = new Kombucha_Batch();
+		$kombucha->where('id', 1);
+		$kombucha->get();
+
+        echo $kombucha->description;
+
 	}
 }

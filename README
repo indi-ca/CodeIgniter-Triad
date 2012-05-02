@@ -2,3 +2,7 @@ The intension of this branch is to create a stable version of 210.
 
 It needs DataMapper.
 Not going with Sparks because it is a bitch get it to work.
+
+The CIU_Loader is hacked a bit to make unit testing work.
+
+All the other branches can be ignored for now.

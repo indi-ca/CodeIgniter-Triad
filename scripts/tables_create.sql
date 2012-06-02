@@ -9,6 +9,7 @@ CREATE USER 'ci_triadu'@'localhost' IDENTIFIED BY 'password';
 GRANT USAGE ON * . * TO 'ci_triadu'@'localhost' IDENTIFIED BY 'password' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
 
 GRANT ALL PRIVILEGES ON `ci_triad` . * TO 'ci_triadu'@'localhost';
+FLUSH PRIVILEDGES;
 
 CREATE TABLE IF NOT EXISTS `phone_carrier` (
   `name` varchar(255) NOT NULL,
@@ -37,7 +38,7 @@ CREATE USER 'ci_triad_testu'@'localhost' IDENTIFIED BY 'password';
 GRANT USAGE ON * . * TO 'ci_triad_testu'@'localhost' IDENTIFIED BY 'password' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
 
 GRANT ALL PRIVILEGES ON `ci_triad_test` . * TO 'ci_triad_testu'@'localhost';
-
+FLUSH PRIVILEDGES;
 
 CREATE TABLE IF NOT EXISTS `phone_carrier` (
   `name` varchar(255) NOT NULL,
